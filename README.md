@@ -6,4 +6,4 @@ The github repo sets up a cron job which: 1) performs a "SELECT COUNT" on a Supa
 
 Note: This is not the fastest, most compact and recommended way to create this workflow. DBOS-Cloud has terrific in-app full Postgres database functionality. Check out the transactions section for more. I built the script this way since I had pre-existing data stored on Supabase.
 
-Get more details on the [dev.to](https://dev.to/) article: [DBOS-Cloud: Fast and Free Automatic Supabase Table Copier](https://dev.to/dboscloud/dbos-cloud-fast-and-free-automatic-supabase-table-copier-1j2o)
+Get more details on the [dev.to](https://dev.to/) article: [DBOS-Cloud: Fast and Free Automatic Data Aggregator](https://dev.to/vince_hirefunnel_co/dbos-cloud-fast-and-free-automatic-data-aggregator-2gdd)
