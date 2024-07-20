@@ -1,48 +1,9 @@
-# DBOS Hello
+# DBOS-Cloud: Fast and Free Automatic Supabase Table Copier
 
-This is a [DBOS app](https://docs.dbos.dev/) bootstrapped with `npx @dbos-inc/dbos-sdk init`.
+This is a simple DBOS app example focusing on remote deployment to DBOS Cloud, their hosted solution with a generous free tier for devs.
 
-## Getting Started
+The github repo sets up a cron job which: 1) performs a "SELECT COUNT" on a Supabase Postgres database table and 2) an "INSERT" to a second table. Consider it a starter for a poor man's data lake aggregating data in the receiving table.
 
-Before you can launch your app, you need a database.
-DBOS works with any Postgres database, but to make things easier, we've provided a script that starts a Docker Postgres container and creates a database.
-Run:
+Note: This is not the fastest, most compact and recommended way to create this workflow. DBOS-Cloud has terrific in-app full Postgres database functionality. Check out the transactions section for more. I built the script this way since I had pre-existing data stored on Supabase.
 
-```bash
-node start_postgres_docker.js
-```
-
-If successful, the script should print `Database started successfully!`.
-
-Next, build the app:
-
-```bash
-npm run build
-```
-
-Then, run a schema migration to create some tables:
-
-```bash
-npx dbos-sdk migrate
-```
-
-If successful, the migration should print `Migration successful!`.
-
-Finally, run the app:
-
-```bash
-npx dbos-sdk start
-```
-
-To see that it's working, visit this URL in your browser: [`http://localhost:3000/greeting/dbos`](http://localhost:3000/greeting/dbos).
-You should get this message: `Hello, dbos! You have been greeted 1 times.`
-Each time you refresh the page, the counter should go up by one!
-
-Congratulations! You just launched a DBOS application.
-
-## Next Steps
-
-- To add more functionality to this application, modify `src/operations.ts`, then rebuild and restart it.  Alternatively, `npm run dev` uses `nodemon` to automatically rebuild and restart the app when source files change, using instructions specified in `nodemon.json`.
-- For a detailed tutorial, check out our [programming quickstart](https://docs.dbos.dev/getting-started/quickstart-programming).
-- To learn how to deploy your application to DBOS Cloud, visit our [cloud quickstart](https://docs.dbos.dev/getting-started/quickstart-cloud/)
-- To learn more about DBOS, take a look at [our documentation](https://docs.dbos.dev/) or our [source code](https://github.com/dbos-inc/dbos-transact).
+Get more details on the [dev.to](https://dev.to/) article: [DBOS-Cloud: Fast and Free Automatic Supabase Table Copier](https://dev.to/dboscloud/dbos-cloud-fast-and-free-automatic-supabase-table-copier-1j2o)
